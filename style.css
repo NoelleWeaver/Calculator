@@ -1,0 +1,85 @@
+div{
+    position: relative;
+}
+.z{
+    width: 500px;
+    height: 600px;
+    background: grey;
+    border-radius: 20px;
+    left: 500px;
+    top:100px;
+}
+#c{
+    width: 450px;
+    height: 200px;
+    border-radius: 20px;
+    background: lightgrey;
+    left: 25px;
+    top: 20px;
+}
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    position: relative;
+}
+#nine{
+    left: 50px;
+    top:70px;
+}
+#eight{
+    left:40px;
+    top:70px;
+}
+#seven{
+    left:30px;
+    top:70px;
+}
+#six{
+    left: 155px;
+    top: 80px;
+}
+#five{
+    left: 145px;
+    top:80px;
+}
+#four{
+    left: -280px;
+    top:130px;
+}
+#three{
+    left: 260px;
+    top: 90px;
+}
+#two{
+    left: -165px;
+    top:140px;
+}
+#one{
+    left: -175px;
+    top:140px;
+}
+#zero{
+    left: 45px;
+    top:150px;
+}
+#mult{
+    left:160px;
+    top:20px;
+}
+#divide{
+    left:55px;
+    top:90px;
+}
+#sub{
+    left:265px;
+    top:160px;
+}
+#addition{
+    left:368px;
+    top:90px;
+}
+#delete{
+    left:160px;
+    top: -100px;
+}
