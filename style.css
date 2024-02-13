@@ -103,7 +103,7 @@ button{
 }
 
 
-/* .calculator{
+.calculator{
     width:300px;
     margin: 0 auto;
     text-align: center;
@@ -115,11 +115,11 @@ input {
 }
 button{
     padding: 10px 20px;
-    background-color: ;
-    color: ;
+    /* background-color: ;
+    color: ; */
     border: none;
     cursor: pointer;
 }
-button:hover {
+/* button:hover {
     background-color: ;
 } */
