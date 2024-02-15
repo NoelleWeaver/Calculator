@@ -4,122 +4,147 @@ html{
 div{
     position: relative;
 }
-.z{
+.calculator{
     width: 500px;
     height: 600px;
     background: rgb(117, 146, 117);
     border-radius: 20px;
-    left: 500px;
-    top:100px;
+    left: 0px;
+    top:50px;
+    margin: 0 auto;
+    text-align: center;
 }
-#c{
-    width: 450px;
+input{
+    width: 400px;
     height: 200px;
     border-radius: 20px;
     background: rgb(146, 238, 166);
-    left: 25px;
+    left: 5px;
     top: 20px;
+    position: relative;
+    padding:10px;
+    margin-bottom:10px;
+    border: none;
 }
 button{
     width: 100px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 10px;
     position: relative;
-}
-#nine{
-    left: 50px;
-    top:70px;
-    background: rgb(170, 241, 192);
-}
-#eight{
-    left:40px;
-    top:70px;
-    background: rgb(170, 241, 192);
-}
-#seven{
-    left:30px;
-    top:70px;
-    background: rgb(170, 241, 192);
-}
-#six{
-    left: 155px;
-    top: 80px;
-    background: rgb(170, 241, 192);
-}
-#five{
-    left: 145px;
-    top:80px;
-    background:rgb(170, 241, 192);
-}
-#four{
-    left: -280px;
-    top:130px;
-    background: rgb(170, 241, 192);
-}
-#three{
-    left: 260px;
-    top: 90px;
-    background: rgb(170, 241, 192);
-}
-#two{
-    left: -165px;
-    top:140px;
-    background: rgb(170, 241, 192);
-}
-#one{
-    left: -175px;
-    top:140px;
-    background: rgb(170, 241, 192);
-}
-#zero{
-    left: 45px;
-    top:150px;
-    background: rgb(170, 241, 192);
-}
-#mult{
-    left:160px;
-    top:20px;
-    background: rgb(170, 241, 192);
-}
-#divide{
-    left:55px;
-    top:90px;
-    background: rgb(170, 241, 192);
-}
-#sub{
-    left:265px;
-    top:160px;
-    background: rgb(170, 241, 192);
-}
-#addition{
-    left:368px;
-    top:90px;
-    background: rgb(170, 241, 192);
-}
-#delete{
-    left:160px;
-    top: -100px;
-    background: rgb(234, 23, 23);
-}
-
-
-.calculator{
-    width:300px;
-    margin: 0 auto;
-    text-align: center;
-}
-input {
-    width: 100%;
-    padding:10px;
-    margin-bottom:10px;
-}
-button{
-    padding: 10px 20px;
-    /* background-color: ;
-    color: ; */
+    left: 600px;
     border: none;
     cursor: pointer;
+    padding: 10px 20px;
 }
-/* button:hover {
-    background-color: ;
-} */
+button:hover {
+    background-color: #fff ;
+}
+.nine{
+    left: 104px;
+    top:0px;
+    background: rgb(170, 241, 192);
+}
+.eight{
+    left:105px;
+    top:0px;
+    background: rgb(170, 241, 192);
+}
+.seven{
+    left:-310px;
+    top:50px;
+    background: rgb(170, 241, 192);
+}
+.six{
+    left: 0px;
+    top: 110px;
+    background: rgb(170, 241, 192);
+}
+.five{
+    left: 0px;
+    top:110px;
+    background:rgb(170, 241, 192);
+}
+.four{
+    left: -0px;
+    top:110px;
+    background: rgb(170, 241, 192);
+}
+.three{
+    left: -104px;
+    top: 220px;
+    background: rgb(170, 241, 192);
+}
+.two{
+    left: -104px;
+    top:220px;
+    background: rgb(170, 241, 192);
+}
+.one{
+    left: -104px;
+    top:220px;
+    background: rgb(170, 241, 192);
+}
+.zero{
+    left: -2px;
+    top: 280px;
+    background: rgb(170, 241, 192);
+}
+.mult{
+    left:375px;
+    top:70px;
+    background: #fff;
+}
+.div{
+    left:270px;
+    top:130px;
+    background: #fff;
+}
+.sub{
+    left:18px;
+    top:60px;
+    background: #fff;
+}
+.add{
+    left:120px;
+    top:0px;
+    background: #fff;
+}
+.del{
+    left:-75px;
+    top: 80px;
+    background: rgb(234, 23, 23);
+}
+.sin{
+    left: -330px;
+    top: -120px;
+    width: 70px;
+}
+.cos{
+    left: -330px;
+    top: -120px;
+    width: 70px;
+}
+.tan{
+    left: 100px;
+    top: -170px;
+    width: 70px;
+}
+.pow{
+    left: 40px;
+    top: -120px;
+    width: 70px;
+}
+.sqrt{
+    left: 188px;
+    top: -120px;
+    width: 70px;
+}
+.log{
+    left: 100px;
+    top: -170px;
+    width: 70px;
+}
+.equal{
+    left: -76px;
+    top: 80px;
+}
