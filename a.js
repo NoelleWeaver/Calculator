@@ -18,40 +18,66 @@
     //     let screen = document.getElementById('num', 'result');
     //     screen.value += value;
     // }
-    function addToDisplay(value) {
-        let numElement = document.getElementById('num');
-        let resultElement = document.getElementById('result');
-        numElement.value += value;
-        resultElement.value += value; // Optionally, you can add the value to the result display as well
+    // function addToDisplay(value) {
+    //     let numElement = document.getElementById('num');
+    //     let resultElement = document.getElementById('result');
+    //     numElement.value += value;
+    //     resultElement.value += value; // Optionally, you can add the value to the result display as well
+    // }
+    let currentInput = "";
+    let operation = null;
+
+    // Clear Display Function
+    function clearDisplay() {
+        document.getElementById("display").value = "";
+        currentInput = "";
+        operation = null;
+    }   
+
+// Append to Display Function
+    function appendToDisplay(value) {
+        currentInput += value;
+        document.getElementById("display").value = currentInput;
+    }
+
+// Set Operation Function
+    function setOperation(op) {
+        operation = op;
+        currentInput += ` ${op} `;
+        document.getElementById("display").value = currentInput;
     }
     function add() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = num + num;
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let num2 = parseFloat(document.getElementById('num2').value);
+        let result = num1 + num2;
         document.getElementById('result').value = result;
     };
 
     function sub() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = num - num;
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let num2 = parseFloat(document.getElementById('num2').value);
+        let result = num1 - num2;
         document.getElementById('result').value = result;
     };
 
     function mult() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = num * num;
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let num2 = parseFloat(document.getElementById('num2').value);
+        let result = num1 * num2;
         document.getElementById('result').value = result;
     };
 
     function div() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = num / num;
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let num2 = parseFloat(document.getElementById('num2').value);
+        let result = num / num2;
         document.getElementById('result').value = result;
     };
 
     // Other mathematical functions
     function sqrt() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = Math.sqrt(num); // Corrected variable name
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let result = Math.sqrt(num1); // Corrected variable name
         document.getElementById('result').value = result;
     }
     
@@ -63,26 +89,26 @@
     }
     
     function log() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = Math.log(num); // Corrected function name
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let result = Math.log(num1); // Corrected function name
         document.getElementById('result').value = result;
     }
 
     function sin() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = Math.sin(num);
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let result = Math.sin(num1);
         document.getElementById('result').value = result;
     };
 
     function cos() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = Math.cos(num);
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let result = Math.cos(num1);
         document.getElementById('result').value = result;
     };
 
     function tan() {
-        let num = parseFloat(document.getElementById('num').value);
-        let result = Math.tan(num);
+        let num1 = parseFloat(document.getElementById('num1').value);
+        let result = Math.tan(num1);
         document.getElementById('result').value = result;
     };
 
@@ -120,3 +146,6 @@
         document.getElementById('result').value = '';
     }
 
+    document.getElementById("display").value = result;
+    currentInput = `${result}`;
+    operation = null;

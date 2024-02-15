@@ -25,6 +25,7 @@ input{
     padding:10px;
     margin-bottom:10px;
     border: none;
+    font-size: xx-large #fff;
 }
 button{
     width: 100px;
@@ -35,6 +36,7 @@ button{
     border: none;
     cursor: pointer;
     padding: 10px 20px;
+    font-size: xx-large #fff;
 }
 button:hover {
     background-color: #fff ;
