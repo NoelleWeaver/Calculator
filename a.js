@@ -24,128 +24,75 @@
     //     numElement.value += value;
     //     resultElement.value += value; // Optionally, you can add the value to the result display as well
     // }
-    let currentInput = "";
-    let operation = null;
+        // Clear Display Function
+let currentInput = "";
 
-    // Clear Display Function
-    function clearDisplay() {
-        document.getElementById("display").value = "";
-        currentInput = "";
-        operation = null;
-    }   
-
-// Append to Display Function
-    function appendToDisplay(value) {
-        currentInput += value;
-        document.getElementById("display").value = currentInput;
-    }
-
-// Set Operation Function
-    function setOperation(op) {
-        operation = op;
-        currentInput += ` ${op} `;
-        document.getElementById("display").value = currentInput;
-    }
-    function add() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let num2 = parseFloat(document.getElementById('num2').value);
-        let result = num1 + num2;
-        document.getElementById('result').value = result;
-    };
-
-    function sub() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let num2 = parseFloat(document.getElementById('num2').value);
-        let result = num1 - num2;
-        document.getElementById('result').value = result;
-    };
-
-    function mult() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let num2 = parseFloat(document.getElementById('num2').value);
-        let result = num1 * num2;
-        document.getElementById('result').value = result;
-    };
-
-    function div() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let num2 = parseFloat(document.getElementById('num2').value);
-        let result = num / num2;
-        document.getElementById('result').value = result;
-    };
-
-    // Other mathematical functions
-    function sqrt() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let result = Math.sqrt(num1); // Corrected variable name
-        document.getElementById('result').value = result;
-    }
+function clearDisplay() {
+    document.getElementById("result").value = "";
+    currentInput = "";
+}
     
-    function power() {
-        let num1 = parseFloat(document.getElementById('num1').value); // Assuming num1 and num2 are used for power operation
-        let num2 = parseFloat(document.getElementById('num2').value);
-        let result = Math.pow(num1, num2); // Corrected variable names
-        document.getElementById('result').value = result;
-    }
+        // Append to Display Function
+function addToDisplay(value) {
+    currentInput += value;
+    document.getElementById("result").value = currentInput;
+}
     
-    function log() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let result = Math.log(num1); // Corrected function name
-        document.getElementById('result').value = result;
-    }
+        // Basic Arithmetic Operations
+const power = () =>{
+    var num1 = parseFloat(document.getElementById('num1').value)
+    var num2 = parseFloat(document.getElementById('num2').value)
+    var result = num1 ** num2
+    document.getElementById('result').innerHTML = result
+}
+const sin = () =>{
+    var num1 = parseFloat(document.getElementById('num1').value)
+    var result = Math.sin(num1)
+    document.getElementById('result').innerHTML = result
+}
+const cos = () => {
+    var num1 = parseFloat(document.getElementById('num1').value)
+    var result = Math.cos(num1)
+    document.getElementById('result').innerHTML = result
+}
+const tan = () => {
+    var num1 = parseFloat(document.getElementById('num1').value)
+    var result = Math.tan(num1)
+    document.getElementById('result').innerHTML = result
+}
 
-    function sin() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let result = Math.sin(num1);
-        document.getElementById('result').value = result;
-    };
-
-    function cos() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let result = Math.cos(num1);
-        document.getElementById('result').value = result;
-    };
-
-    function tan() {
-        let num1 = parseFloat(document.getElementById('num1').value);
-        let result = Math.tan(num1);
-        document.getElementById('result').value = result;
-    };
-
+    
     // Evaluate function to perform calculation
-    function evaluate() {
-        // let screen = document.getElementById('screen');
-        // try {
-        //     let result = eval(screen.value);
-        //     screen.value = result;
-        // } catch (error) {
-        //     screen.value = 'Error';
-        // }
-        let operator = document.getElementById('operator').value;
-    
+function evaluate() {
+    let num2 = parseFloat(currentInput); // Get the second operand
+    let operator = document.getElementById("operator").value;
+    let num1 = parseFloat(document.getElementById("result").value);
+
+    let result;
     switch (operator) {
-        case '+':
-            add();
+        case "+":
+            result = num1 + num2;
             break;
-        case '-':
-            sub();
+        case "-":
+            result = num1 - num2;
             break;
-        case '*':
-            mult();
+        case "*":
+            result = num1 * num2;
             break;
-        case '/':
-            div();
+        case "/":
+            result = num1 / num2;
             break;
         default:
-            document.getElementById('result').value = 'Error: Invalid operator';
+            result = "Error: Invalid operator";
             break;
     }
-    }
-    // Clear function to clear the screen
-    function clr() {
-        document.getElementById('result').value = '';
-    }
 
-    document.getElementById("display").value = result;
-    currentInput = `${result}`;
-    operation = null;
+    document.getElementById("result").value = result;
+    currentInput = result.toString(); // Store the result for further calculations
+    }
+    
+        // Clear function to clear the screen
+function clr() {
+    document.getElementById("result").value = "";
+    currentInput = "";
+}
