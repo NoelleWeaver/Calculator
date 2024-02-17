@@ -9,30 +9,30 @@
 <body>
     <div class="calculator">
         <input type="text" id="result" readonly>
-        <button id="num1" class="zero" value="0" onclick="addToDisplay('0')">0</button>
+        <button id="num0" class="zero" value="0" onclick="addToDisplay('0')">0</button>
         <button id="num1" class="one" value="1" onclick="addToDisplay('1')">1</button>
-        <button id="num1" class="two" value="2" onclick="addToDisplay('2')">2</button>
-        <button id="num1" class="three" value="3" onclick="addToDisplay('3')">3</button>
-        <button id="num1" class="four" value="4" onclick="addToDisplay('4')">4</button>
-        <button id="num1" class="five" value="5" onclick="addToDisplay('5')">5</button>
-        <button id="num1" class="six" value="6" onclick="addToDisplay('6')">6</button>
-        <button id="num1" class="seven" value="7" onclick="addToDisplay('7')">7</button>
-        <button id="num1" class="eight" value="8" onclick="addToDisplay('8')">8</button>
-        <button id="num1" class="nine" value="9" onclick="addToDisplay('9')">9</button>
-        <button class="add" onclick="add()">+</button>
-        <button class="sub" onclick="sub()">-</button>
-        <button class="mult" onclick="mult()">x</button>
-        <button class="div" onclick="div()">/</button>
-        <button class="sqrt" onclick="sqrt()">√</button>
-        <button class="pow" onclick="power()">^</button>
-        <button class="sin" onclick="sin()">sin</button>
-        <button class="cos" onclick="cos()">cos</button>
-        <button class="tan" onclick="tan()">tan</button>
-        <button class="log" onclick="log()">log</button>
+        <button id="num2" class="two" value="2" onclick="addToDisplay('2')">2</button>
+        <button id="num3" class="three" value="3" onclick="addToDisplay('3')">3</button>
+        <button id="num4" class="four" value="4" onclick="addToDisplay('4')">4</button>
+        <button id="num5" class="five" value="5" onclick="addToDisplay('5')">5</button>
+        <button id="num6" class="six" value="6" onclick="addToDisplay('6')">6</button>
+        <button id="num7" class="seven" value="7" onclick="addToDisplay('7')">7</button>
+        <button id="num8" class="eight" value="8" onclick="addToDisplay('8')">8</button>
+        <button id="num9" class="nine" value="9" onclick="addToDisplay('9')">9</button>
+        <button id="add" class="add" value="+" onclick="addToDisplay('+'); add()">+</button>
+        <button class="sub" value="-" onclick="addToDisplay('-'); sub()">-</button>
+        <button class="mult" value="x" onclick="addToDisplay('x'); mult()">x</button>
+        <button class="div" value="/" onclick="addToDisplay('/'); div()">/</button>
+        <button class="sqrt" value="√" onclick="addToDisplay('√'); sqrt()">√</button>
+        <button class="pow" value="^" onclick="addToDisplay('^'); power()">^</button>
+        <button class="sin" value="sin" onclick="addToDisplay('sin'); sin()">sin</button>
+        <button class="cos" value="cos" onclick="addToDisplay('cos'); cos()">cos</button>
+        <button class="tan" value="tan" onclick="addToDisplay('tan'); tan()">tan</button>
+        <button class="log" value="log" onclick="addToDisplay('log'); log()">log</button>
         <button class="equal" onclick="evaluate()">=</button>
-        <button class="del" onclick="clr()">C</button>
+        <button class="del" onclick="clr()">CE</button>
     </div>
 
-    <script src="./a.js"></script>
+    <script src="./a.js" defer></script>
 </body>
 </html>

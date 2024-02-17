@@ -38,7 +38,45 @@ function addToDisplay(value) {
     document.getElementById("result").value = currentInput;
 }
     
-        // Basic Arithmetic Operations
+// Basic Arithmetic Operations
+function add() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    if (isNaN(num1) || isNaN(num2)) {
+        console.error('Invalid input. Please enter valid numbers.');
+        return;
+    }
+    let result = num1 + num2;
+    document.getElementById('result').value = result;
+};
+    
+function sub() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let result = num1 - num2;
+    document.getElementById('result').value = result;
+};
+    
+function mult() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let result = num1 * num2;
+    document.getElementById('result').value = result;
+};
+    
+function div() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let num2 = parseFloat(document.getElementById('num2').value);
+    let result = num / num2;
+    document.getElementById('result').value = result;
+};
+    
+// Other mathematical functions
+function sqrt() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let result = Math.sqrt(num1); // Corrected variable name
+    document.getElementById('result').value = result;
+}
 const power = () =>{
     var num1 = parseFloat(document.getElementById('num1').value)
     var num2 = parseFloat(document.getElementById('num2').value)
@@ -60,36 +98,24 @@ const tan = () => {
     var result = Math.tan(num1)
     document.getElementById('result').innerHTML = result
 }
+function log() {
+    let num1 = parseFloat(document.getElementById('num1').value);
+    let result = Math.log(num1); // Corrected function name
+    document.getElementById('result').value = result;
+}
 
     
-    // Evaluate function to perform calculation
+// Evaluate function to perform calculation
 function evaluate() {
-    let num2 = parseFloat(currentInput); // Get the second operand
-    let operator = document.getElementById("operator").value;
-    let num1 = parseFloat(document.getElementById("result").value);
-
+    let expression = document.getElementById("result").value;
     let result;
-    switch (operator) {
-        case "+":
-            result = num1 + num2;
-            break;
-        case "-":
-            result = num1 - num2;
-            break;
-        case "*":
-            result = num1 * num2;
-            break;
-        case "/":
-            result = num1 / num2;
-            break;
-        default:
-            result = "Error: Invalid operator";
-            break;
+    try {
+        result = eval(expression);
+        document.getElementById("result").value = result;
+    } catch (error) {
+        document.getElementById("result").value = "Error";
     }
-
-    document.getElementById("result").value = result;
-    currentInput = result.toString(); // Store the result for further calculations
-    }
+}
     
         // Clear function to clear the screen
 function clr() {
